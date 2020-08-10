@@ -1,5 +1,6 @@
 const { MessageEmbed, MessageCollector, MessageAttachment } = require("discord.js");
 const Canvas = require('canvas');
+Canvas.registerFont('./.fonts/arial-black.otf', {family: 'arial-black'});
 
 module.exports = {
     name: 'fuel',
