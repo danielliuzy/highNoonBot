@@ -21,9 +21,9 @@ module.exports = {
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = "#dc322f";
-        ctx.font = '66px arial black';
+        ctx.font = '66px arial-black';
         ctx.fillText("FREE FOR ALL", 350, 50);
-        ctx.font = '60px arial black';
+        ctx.font = '60px arial-black';
         ctx.fillStyle = '#ffffff';
         ctx.strokeStyle = '#000000';
         ctx.lineWidth = 3;
@@ -227,7 +227,7 @@ const applyText = (canvas, text, size, width) => {
 
 	do {
 		// Assign the font to the context and decrement it so it can be measured again
-		ctx.font = `${fontSize -= 1}px arial black`;
+		ctx.font = `${fontSize -= 1}px arial-black`;
 		// Compare pixel width of the text to the canvas minus the approximate avatar size
 	} while (ctx.measureText(text).width > width);
 
