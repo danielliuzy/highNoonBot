@@ -147,4 +147,4 @@ function getUserFromMention(mention) {
     }
 }
 
-client.login(config.token);
+client.login(process.env.token);
