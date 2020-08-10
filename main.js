@@ -19,7 +19,7 @@ client.once('ready', () => {
 });
 
 client.on('ready', () => {
-    client.user.setActivity('-hnhelp', {type: 'LISTENING'});
+    client.user.setActivity(`${config.prefix}hnhelp`, {type: 'LISTENING'});
 });
 
 client.on('message', message => {
@@ -33,7 +33,7 @@ client.on('message', message => {
         else if(command.toLowerCase() === 'duel') {
             let opponent = getUserFromMention(args[0]);
             if(args.length != 1 || !opponent) {
-                message.channel.send(`${message.author}, to challenge someone to a duel, use \`-duel <@user>\`!`);
+                message.channel.send(`${message.author}, to challenge someone to a duel, use \`${config.prefix}duel <@user>\`!`);
                 return;
             }
             else if(message.author.id === opponent.id) {
@@ -49,7 +49,7 @@ client.on('message', message => {
         else if(command.toLowerCase() === 'fuel') {
             let opponent = getUserFromMention(args[0]);
             if((args.length != 1) || !opponent) {
-                message.channel.send(`${message.author}, to challenge someone to a fake duel, use \`-fuel <@user>\`!`);
+                message.channel.send(`${message.author}, to challenge someone to a fake duel, use \`${config.prefix}fuel <@user>\`!`);
                 return;
             }
             else if(message.author.id === opponent.id) {
@@ -68,7 +68,7 @@ client.on('message', message => {
         else if(command === 'shoot') {
             let opponent = getUserFromMention(args[0]);
             if((args.length != 1 && args.length != 2) || !opponent) {
-                message.channel.send(`${message.author}, to challenge someone to a CASE INSENSITIVE shoot 'em up, use \`-shoot <@user> [opt: # of characters]\`!`);
+                message.channel.send(`${message.author}, to challenge someone to a CASE INSENSITIVE shoot 'em up, use \`${config.prefix}shoot <@user> [opt: # of characters]\`!`);
                 return;
             }
             else if(message.author.id === opponent.id) {
@@ -81,7 +81,7 @@ client.on('message', message => {
             }
             if(args.length == 2) {
                 if(isNaN(args[1])) {
-                    message.channel.send(`${message.author}, to challenge someone to a CASE INSENSITIVE shoot 'em up, use \`-shoot <@user> [opt: # of characters]\`!`);
+                    message.channel.send(`${message.author}, to challenge someone to a CASE INSENSITIVE shoot 'em up, use \`${config.prefix}shoot <@user> [opt: # of characters]\`!`);
                     return;
                 }
                 else if(args[1] < 1) {
@@ -101,7 +101,7 @@ client.on('message', message => {
         else if(command === 'Shoot') {
             let opponent = getUserFromMention(args[0]);
             if((args.length != 1 && args.length != 2) || !opponent) {
-                message.channel.send(`${message.author}, to challenge someone to a CASE SENSITIVE shoot 'em up, use \`-Shoot <@user> [opt: # of characters]\`!`);
+                message.channel.send(`${message.author}, to challenge someone to a CASE SENSITIVE shoot 'em up, use \`${config.prefix}Shoot <@user> [opt: # of characters]\`!`);
                 return;
             }
             else if(message.author.id === opponent.id) {
@@ -114,7 +114,7 @@ client.on('message', message => {
             }
             if(args.length == 2) {
                 if(isNaN(args[1])) {
-                    message.channel.send(`${message.author}, to challenge someone to a CASE SENSITIVE shoot 'em up, use \`-Shoot <@user> [opt: # of characters]\`!`);
+                    message.channel.send(`${message.author}, to challenge someone to a CASE SENSITIVE shoot 'em up, use \`${config.prefix}Shoot <@user> [opt: # of characters]\`!`);
                     return;
                 }
                 else if(args[1] < 1) {
