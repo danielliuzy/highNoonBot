@@ -16,6 +16,7 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('bot is online');
+    console.log(client.guilds);
 });
 
 client.on('ready', () => {
