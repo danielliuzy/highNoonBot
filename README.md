@@ -1,5 +1,9 @@
 Invite Link: https://discord.gg/9zwEnUB
 
+Video Demo: https://www.youtube.com/watch?v=bCN72-RVPN4
+
+Top.gg Link: https://top.gg/bot/740552255656165408
+
 Add this bot to your server to challenge your friends in western shootouts and gunfights! Features 5 game modes and more coming soon!
 
 # Commands
